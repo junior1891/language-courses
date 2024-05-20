@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>TestLanguageCourseTrigger</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>LanguageCourseTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Language_Course__c.Course_Instructor__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Language_Course_Instructor__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Language_Course_Instructor__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>59.0</version>
+</Package>
