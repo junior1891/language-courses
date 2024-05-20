@@ -1,0 +1,37 @@
+<aura:component 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+	<aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="nombre" type="String" default="Guardar"/>
+    <aura:attribute name="Titulo" type="String" default="Oportunidad"/>
+    {!v.recordId}
+    <div class="container">
+        <h1>{!v.Titulo}</h1>
+        <div class="backwhite">
+<lightning:recordEditForm
+            onload="{!c.handleLoad}"
+            onsubmit="{!c.handleSubmit}"
+            onsuccess="{!c.handleSuccess}"
+            recordId="{!v.recordId}"
+            objectApiName="Opportunity">
+            <!-- the messages component is for error messages -->
+            <lightning:messages />
+    
+    <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <lightning:inputField aura:id="stage" fieldName="StageName"/>
+                </div>
+                <div class="slds-col">
+                <lightning:inputField fieldName="Name" />
+                </div>
+    </div>
+    
+            <div class="slds-m-top_medium">
+                <lightning:button aura:id="bttn" variant="brand" type="submit" name="save" label="{!v.nombre}" />
+            </div>
+        </lightning:recordEditForm>
+            <div class="slds-m-top_medium">
+                <lightning:button aura:id="bttnw" variant="brand" onclick="{!c.click}" name="save" label="Prueba" />
+            </div>
+        </div></div>
+</aura:component>

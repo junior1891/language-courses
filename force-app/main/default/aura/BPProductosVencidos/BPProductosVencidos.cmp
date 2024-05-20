@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" controller='BP_ExpiredProductsCtr'>
+    <lightning:notificationsLibrary aura:id="notificationsLib"/>
+    
+    <aura:attribute name="recordId" type="Id" />
+ <aura:handler name="init" value="{!this}" action="{!c.doconsultarProductos}"/>
+ <aura:attribute name="infoExpPrd" type="Account" />
+    
+ <lightning:card variant="Narrow" title="Consulta de Productos Vencidos" iconName="standard:account">
+     
+     <lightning:button name="ConsultarPV" class="botonconsulta"  label="Consultar" iconPosition="left"
+                       title="Productos Vencidos"  iconName="utility:announcement" onclick="{! c.doInit}"/>
+<div class="c-container">
+    <lightning:layout>
+        <lightning:layoutItem flexibility="auto" padding="around-small">
+                    <div class="textos">Fecha de actualización: 
+                    <!-- <div class="custom-box2"> -->
+                        <lightning:formattedDateTime value="{!v.infoExpPrd.BP_UpdateExpiredProducts__c}" 
+                                    timeZone="{! $Locale.timezone }" 
+                                    year="numeric"
+                                    month="numeric"
+                                    day="numeric"
+                                    hour="2-digit" 
+                                    minute="2-digit"/>
+                        </div>
+                    <!-- </div> --> 
+                </lightning:layoutItem>
+            </lightning:layout>
+     </div>
+     </lightning:card>
+    <aura:attribute name="isProcessing" type="Boolean" default="false" />
+</aura:component>

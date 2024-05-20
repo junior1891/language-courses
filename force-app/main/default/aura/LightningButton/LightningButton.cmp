@@ -1,0 +1,4 @@
+<aura:component controller="ultimaClaseControles_cls" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global"  >
+	<lightning:input type='text' aura:id="Valor" label="Value"/>
+    <lightning:button variant="brand" label="Submit" onclick="{! c.handleClick }" />
+</aura:component>

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card icon-name="doctype:excel" title="Importar Datos de Excel">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                type="file" 
+                accept=".xlsx, .xls" 
+                label="Inserte el archivo Excel"
+                name="fileUploader"
+                onchange={importDataToApex}
+                help-message="Cargue un archivo Excel (.xlsx, .xls)">
+            </lightning-input>
+        </div>
+    </lightning-card>
+</template>

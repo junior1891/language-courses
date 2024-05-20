@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable" access="global" 
+                controller="SLA_ctr">
+<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="data" type="object"/>
+    <aura:attribute name="columns" type="List"/>
+    <lightning:datatable
+                         keyField="id"
+                         aura:id="grillaSLA"
+                         columns="{! v.columns }"
+                         data="{! v.data }">
+    </lightning:datatable>
+</aura:component>

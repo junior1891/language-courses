@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="AppexPrueba2">
+	<aura:attribute name="recordId" type="String"/>
+    
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columnas" type="List"/>
+    <div class="container">
+            <div class="fondoblanco"><h1>PRUEBA 2</h1></div></div>
+    <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columnas }"
+                hideCheckboxColumn="true"/>
+    <aura:handler name="init" value="{! this}" action="{!c.inicializarprueba2}"/>
+</aura:component>
