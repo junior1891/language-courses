@@ -29,7 +29,7 @@ public static String newIdTest;
             if(lst.Id !=newIdTest){
                 lst.Name=nameTest;
             }
-            //System.debug(lst);
+            System.debug(lst);
         }
         update lstopp;
             }
